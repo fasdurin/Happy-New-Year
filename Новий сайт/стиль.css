@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-y: hidden;
+}
+.backgraund{
+    background:url(fon.jpg) ;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.card{
+    position: relative;
+    height: 320px;
+    width: 200px;
+    top: 60px;
+    left: 550px;
+    transition: all 1s linear;
+    perspective: 1000px;
+}
+.front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(Fon_card.jpg);
+    background-size: cover;
+    z-index: 1;
+    transition: all 1s linear;
+    backface-visibility: hidden;
+}
+.front h1{
+    font-size: 40px;
+    font-style: italic;
+    color: rgb(0, 0, 0);
+}
+.front h1:nth-child(1){
+    margin-top: 100px;
+    margin-left: 5px;
+}
+
+
+.back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(-180deg);
+    background-color: rgba(79, 255, 9, 0.993);
+    transition: all 1s linear;
+}
+
+.active{
+    transform: rotateY(180deg);
+}
+.active ~.back{
+    transform: rotateY(0deg);
+}
+.active1 ~.front{
+    transform: rotateY(180deg);
+}
+.snijunka{
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    animation: snig 5s linear infinite;
+    top: -50px;
+    transition: all 1s ease;
+    position: relative;
+}
+@keyframes snig{
+    0%{
+        
+    }
+    10%{
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(360deg);
+        top: 70vh;
+    }
+}
+.snijunka:nth-child(2){
+    animation-delay: 1s;
+}
+.snijunka:nth-child(3){
+    animation-delay: 0.5s;
+}
+.snijunka:nth-child(4){
+    animation-delay: 2s;
+}
+.snijunka:nth-child(5){
+    animation-delay: 1.2s;
+}
+.snijunka:nth-child(6){
+    animation-delay: 1s;
+}
+.snijunka:nth-child(7){
+    animation-delay: 4s;
+}
+.snijunka:nth-child(8){
+    animation-delay: 2s;
+}
+.snijunka:nth-child(9){
+    animation-delay: 1.2s;
+}
+.snijunka:nth-child(10){
+    animation-delay: 4s;
+}
+.snijunka:nth-child(11){
+    animation-delay: 3s;
+}
+.snijunka:nth-child(12){
+    animation-delay: 0.5s;
+}
+.snijunka:nth-child(13){
+    animation-delay: 1.5s;
+}
+.snijunka:nth-child(14){
+    animation-delay: 1s;
+}
+.snijunka:nth-child(15){
+    animation-delay: 3s;
+}
+.snijunka:nth-child(16){
+    animation-delay: 4s;
+}
+.snijunka:nth-child(17){
+    animation-delay: 1.2s;
+}
+.snijunka:nth-child(18){
+    animation-delay: 3s;
+}
+.snijunka:nth-child(19){
+    animation-delay: 0.5s;
+}
+.snijunka:nth-child(20){
+    animation-delay: 0s;
+}
+.snijunka:nth-child(21){
+    animation-delay: 4s;
+}
+.snijunka:nth-child(22){
+    animation-delay: 1s;
+}
+.snijunka:nth-child(23){
+    animation-delay: 0.5s;
+}
+.snijunka:nth-child(24){
+    animation-delay: 2s;
+}
+.snijunka:nth-child(25){
+    animation-delay: 1.5s;
+}
+.button{
+    position: relative;
+    top: 100px;
+    left: 500px;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    box-shadow: 0 10px 20px black;
+    transition: all 1s ease;
+}
+.two_bytton{
+    position: relative;
+    top: 150px;
+    left: 500px;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    box-shadow: 0 10px 20px black;
+    transition: all 1s ease;
+}
+.two_bytton a{
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(179, 255, 0);
+}
+.two_bytton:hover{
+    top: 155px;
+    box-shadow: none;
+}
+.button:hover{
+    top: 105px;
+    box-shadow: none;
+}
+.button a{
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(179, 255, 0);
+}
+.kinez{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 3s ease;
+}
+.kinez video{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 1;
+}
+.video_content{
+    z-index: 2;
+}
+.video_content h1{
+    color: chartreuse;
+    font-size: 70px;
+}
+.video_content img{
+    height: 200px;
+    position: absolute;
+    top: 40vh;
+}
+.final{
+    transform: translateY(-100vh);
+}
